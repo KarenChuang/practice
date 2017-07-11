@@ -5,7 +5,7 @@ if(1) {
   let name = "Karen";
 }
 
-console.log('name', name); // undefined
+// console.log('name', name); // undefined
 
 
 // ---- 
@@ -47,7 +47,7 @@ let firstName = 'Karen';
 let lastName = 'Chuang';
 
 console.log('My name is' + firstName + ' ' + lastName); //My name is Karen Chuang
-console.log('My name is' ${firstName} ${lastName}); //My name is Karen Chuang
+console.log(`My name is ${firstName} ${lastName}`); //My name is Karen Chuang
 
 
 let person = {
