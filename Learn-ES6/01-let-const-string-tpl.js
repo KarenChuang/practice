@@ -1,7 +1,7 @@
 // ----------- let ----------------------
 
 // ---- 
-if(1) {
+if (1) {
   let name = "Karen";
 }
 
@@ -9,7 +9,7 @@ if(1) {
 
 
 // ---- 
-for (var i = 0; i < 10; i++ ) {
+for (var i = 0; i < 10; i++) {
   console.log(i);
 }
 
@@ -17,7 +17,7 @@ console.log('var outside loop', i); // var outside loop 10
 
 
 // ---- 
-for (let j = 0; j < 10; j++ ) {
+for (let j = 0; j < 10; j++) {
   console.log(j);
 }
 
@@ -60,6 +60,3 @@ let person = {
 let my_name = person.sayName();
 
 console.log(name); //My name is Karen Chuang
-
-
-

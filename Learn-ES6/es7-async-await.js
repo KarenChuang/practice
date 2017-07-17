@@ -29,5 +29,3 @@ async function getCombined() {
   const combined = await getCombined();
   console.log(combined);
 }());
-
-
