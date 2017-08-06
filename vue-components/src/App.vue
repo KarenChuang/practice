@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="todo">TODO</router-link>
-      <router-link to="tabs">TABS</router-link>
+      <router-link to="todo" :class="{ 'actived': $route.name === 'todo' }">Todo</router-link>
+      <router-link to="tabs" :class="{ 'actived': $route.name === 'tabs' }">Tabs</router-link>
     </nav>
     <router-view class="tab-view"></router-view>
   </div>
@@ -14,31 +14,43 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "~@/styles/reset.scss";
+
+$sidebar-width: 150px;
+$sidebar-bg-color: #E49EA3;
+
+@mixin actived {
+  padding-left: 20px;
+  background: darken($sidebar-bg-color, 5%);
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
 }
 
-h1, h2 {
-  font-weight: normal;
+nav {
+  float: left;
+  width: $sidebar-width;
+  background: $sidebar-bg-color;
+  height: 100%;
+  a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    transition: .2s;
+    &:hover {
+      @include actived;
+    }
+  }
+  .actived {
+    @include actived;
+  }
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.tab-view {
+  margin-left: $sidebar-width + 10px;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
+
