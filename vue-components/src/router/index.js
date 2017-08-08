@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Todo from '@/components/Todo'
-import Tabs from '@/components/Tabs'
+import Todo from '@/components/todo'
+import Menu from '@/components/menu'
 
 Vue.use(Router)
 
@@ -14,9 +14,9 @@ export default new Router({
       component: Todo
     },
     {
-      path: '/tabs',
-      name: 'tabs',
-      component: Tabs
+      path: '/menu',
+      name: 'menu',
+      component: Menu
     },
   ]
 })

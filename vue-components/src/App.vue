@@ -2,7 +2,7 @@
   <div id="app">
     <nav>
       <router-link to="todo" :class="{ 'actived': $route.name === 'todo' }">Todo</router-link>
-      <router-link to="tabs" :class="{ 'actived': $route.name === 'tabs' }">Tabs</router-link>
+      <router-link to="menu" :class="{ 'actived': $route.name === 'menu' }">Menu</router-link>
     </nav>
     <router-view class="tab-view"></router-view>
   </div>
