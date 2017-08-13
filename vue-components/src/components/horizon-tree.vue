@@ -1,12 +1,11 @@
 <template>
-  <div class="hello">
-    <span>todo...</span>
+  <div class="horizon-tree">
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'tree',
   data () {
     return {
       msg: 'Todo'
