@@ -16,37 +16,9 @@
 
 <script>
 export default {
-  name: 'hello',
-  data () {
-    return {
-      tabList: [{
-        id: 1,
-        name: 'Menu 1',
-        actived: false,
-        sub: [{
-          id: 11,
-          name: 'Sub Menu 1-a'
-        },{
-          id: 12,
-          name: 'Sub Menu 1-b'
-        },{
-          id: 13,
-          name: 'Sub Menu 1-c'
-        }]
-      },{
-        id: 2,
-        name: 'Menu 2',
-        actived: false,
-        sub: [{
-          id: 21,
-          name: 'Sub Menu 2-a'
-        }]
-      },{
-        id: 3,
-        name: 'Menu 3',
-        actived: false
-      }]
-    }
+  name: 'nav-menu',
+  props: {
+    tabList: Array
   },
   methods: {
     classObject(item) {
@@ -64,27 +36,27 @@ export default {
 </script>
 
 <style lang="scss">
-
+$bg-color: #e2d1d2;
 
 .nav-menu {
   width: 300px;
   &__name {
     cursor: pointer;
     padding: 15px;
-    background: #e2d1d2;
+    background: $bg-color;
     transition: .2s;
     &:hover {
-      background: darken(#e2d1d2, 15%);
+      background: darken($bg-color, 15%);
       color: #fff;
     }
   }
   &__sub--name {
-    background: #f1e7e7;
+    background: lighten($bg-color, 5%);
     padding: 15px;
     text-indent: 20px;
     &:hover {
       cursor: pointer;
-      background: darken(#f1e7e7, 5%);
+      background: darken($bg-color, 5%);
       color: #fff;
     }
   }

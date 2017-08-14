@@ -1,14 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Todo from '@/components/todo'
-import Menu from '@/components/menu'
-import HorizonTree from '@/components/horizon-tree'
+import Menu from '@/pages/menu'
+import HorizonTree from '@/pages/horizon-tree'
+import Homepage from '@/components/homepage'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
+    {
+      path: '/homepage',
+      name: 'homepage',
+      component: Homepage
+    },
     {
       path: '/todo',
       name: 'todo',

@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="todo" :class="{ 'actived': $route.name === 'todo' }">Todo</router-link>
+      <router-link to="homepage" :class="{ 'actived': $route.name === 'homepage' }">homepage</router-link>
       <router-link to="menu" :class="{ 'actived': $route.name === 'menu' }">Menu</router-link>
+      <router-link to="todo" :class="{ 'actived': $route.name === 'Todo' }">Todo</router-link>
       <router-link to="horizon-tree" :class="{ 'actived': $route.name === 'horizon-tree' }">Horizon Tree</router-link>
     </nav>
     <router-view class="tab-view"></router-view>
